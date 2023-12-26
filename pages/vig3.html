@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<link rel=stylesheet href=../css/stylevig3.css>
+<title>Conversor Vigas</title>
+<style>body{font-family:"Arial",sans-serif;margin:0;padding:0;background-color:#f5f5f5;display:flex;justify-content:center;align-items:center;height:100vh}.container{max-width:400px;padding:20px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,0.1);border-radius:10px;text-align:center}h1{color:#333;font-size:24px;margin-bottom:20px}label{font-weight:bold;color:#666}select,input[type="number"],button{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;font-size:14px}button{background-color:#3498db;color:#fff;font-weight:bold;cursor:pointer;border-radius:5px;transition:background-color .3s ease}button:hover{background-color:#2980b9}#resultado{font-size:18px;padding:15px;background-color:#f0f0f0;border:1px solid #d0d0d0;border-radius:5px;color:#333}.btn-link{display:inline-block;text-decoration:none;background-color:#eee;color:#666;padding:8px 16px;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s ease}.btn-link:hover{background-color:#ddd}</style>
+</head>
+<body>
+<div class=container>
+<h1>Conversor Vigas</h1>
+<label for=dimensoes>Selecione o Tipo:</label>
+<select id=dimensoes>
+<option value="	8.48	"> PERFIL I 3" Alma: 1ª </option>
+<option value="	9.67	"> PERFIL I 3" Alma: 2ª </option>
+<option value="	11.46	"> PERFIL I 4" Alma: 1ª </option>
+<option value="	12.65	"> PERFIL I 4" Alma: 2ª </option>
+<option value="	14.88	"> PERFIL I 5" Alma: 1ª </option>
+<option value="	18.23	"> PERFIL I 5" Alma: 2ª </option>
+<option value="	18.60	"> PERFIL I 6" Alma: 1ª </option>
+<option value="	21.95	"> PERFIL I 6" Alma: 2ª </option>
+<option value="	27.38	"> PERFIL I 8" Alma: 1ª </option>
+<option value="	30.50	"> PERFIL I 8" Alma: 2ª </option>
+<option value="	6.10	"> PERFIL U 3" Alma: 1ª </option>
+<option value="	7.44	"> PERFIL U 3" Alma: 2ª </option>
+<option value="	8.04	"> PERFIL U 4" Alma: 1ª </option>
+<option value="	9.30	"> PERFIL U 4" Alma: 2ª </option>
+<option value="	12.20	"> PERFIL U 6" Alma: 1ª </option>
+<option value="	15.63	"> PERFIL U 6" Alma: 2ª </option>
+<option value="	17.11	"> PERFIL U 8" Alma: 1ª </option>
+<option value="	20.46	"> PERFIL U 8" Alma: 2ª </option>
+<option value="	22.77	"> PERFIL U 10" Alma: 1ª </option>
+<option value="	29.76	"> PERFIL U 10" Alma: 2ª </option>
+<option value="	13	"> PERFIL W 150 x 13,0 </option>
+<option value="	18	"> PERFIL W 150 x 18,0 </option>
+<option value="	15	"> PERFIL W 200 x 15,0 </option>
+<option value="	19.3	"> PERFIL W 200 x 19,3 </option>
+<option value="	22.5	"> PERFIL W 200 x 22,5 </option>
+<option value="	26.6	"> PERFIL W 200 x 26,6 </option>
+<option value="	31.3	"> PERFIL W 200 x 31,3 </option>
+<option value="	17.9	"> PERFIL W 250 x 17,9 </option>
+<option value="	22.3	"> PERFIL W 250 x 22,3 </option>
+<option value="	25.3	"> PERFIL W 250 x 25,3 </option>
+<option value="	28.4	"> PERFIL W 250 x 28,4 </option>
+<option value="	32.7	"> PERFIL W 250 x 32,7 </option>
+<option value="	38.5	"> PERFIL W 250 x 38,5 </option>
+<option value="	44.8	"> PERFIL W 250 x 44,8 </option>
+<option value="	21	"> PERFIL W 310 x 21,0 </option>
+<option value="	23.8	"> PERFIL W 310 x 23,8 </option>
+<option value="	28.3	"> PERFIL W 310 x 28,3 </option>
+<option value="	32.7	"> PERFIL W 310 x 32,7 </option>
+<option value="	38.7	"> PERFIL W 310 x 38,7 </option>
+<option value="	44.5	"> PERFIL W 310 x 44,5 </option>
+<option value="	52	"> PERFIL W 310 x 52,0 </option>
+<option value="	32.9	"> PERFIL W 360 x 32,9 </option>
+<option value="	39	"> PERFIL W 360 x 39,0 </option>
+<option value="	44	"> PERFIL W 360 x 44,0 </option>
+<option value="	51	"> PERFIL W 360 x 51,0 </option>
+<option value="	57.8	"> PERFIL W 360 x 57,8 </option>
+<option value="	64	"> PERFIL W 360 x 64,0 </option>
+<option value="	72	"> PERFIL W 360 x 72,0 </option>
+<option value="	79	"> PERFIL W 360 x 79,0 </option>
+<option value="	38.8	"> PERFIL W 410 x 38,8 </option>
+<option value="	22.5	"> PERFIL W 150 x 22,5 </option>
+<option value="	29.8	"> PERFIL W 150 x 29,8 </option>
+<option value="	37.1	"> PERFIL W 150 x 37,1 </option>
+<option value="	35.9	"> PERFIL W 200 x 35,9 </option>
+<option value="	41.7	"> PERFIL W 200 x 41,7 </option>
+<option value="	46.1	"> PERFIL W 200 x 46,1 </option>
+<option value="	52	"> PERFIL W 200 x 52,0 </option>
+<option value="	53	"> PERFIL HP 200 x 53,0 </option>
+<option value="	59	"> PERFIL W 200 x 59,0 </option>
+<option value="	71	"> PERFIL W 200 x 71,0 </option>
+<option value="	86	"> PERFIL W 200 x 86,0 </option>
+<option value="	62	"> PERFIL HP 250 x 62,0 </option>
+<option value="	73	"> PERFIL W 250 x 73,0 </option>
+<option value="	80	"> PERFIL W 250 x 80,0 </option>
+<option value="	85	"> PERFIL HP 250 x 85,0 </option>
+<option value="	89	"> PERFIL W 250 x 89,0 </option>
+<option value="	101	"> PERFIL W 250 x 101,0 </option>
+<option value="	115	"> PERFIL W 250 x 115,0 </option>
+<option value="	79	"> PERFIL HP 310 x 79,0 </option>
+<option value="	93	"> PERFIL HP 310 x 93,0 </option>
+<option value="	97	"> PERFIL W 310 x 97,0 </option>
+<option value="	107	"> PERFIL W 310 x 107,0 </option>
+<option value="	110	"> PERFIL HP 310 x 110,0 </option>
+<option value="	117	"> PERFIL W 310 x 117,0 </option>
+<option value="	125	"> PERFIL HP 310 x 125,0 </option>
+<option value="	91	"> PERFIL W 360 x 91,0 </option>
+<option value="	101	"> PERFIL W 360 x 101,0 </option>
+<option value="	110	"> PERFIL W 360 x 110,0 </option>
+<option value="	122	"> PERFIL W 360 x 122,0 </option>
+<option value="	46.1"> PERFIL W 410 x 46,1 </option>
+<option value="	53	"> PERFIL W 410 x 53,0 </option>
+<option value="	60	"> PERFIL W 410 x 60,0 </option>
+<option value="	67	"> PERFIL W 410 x 67,0 </option>
+<option value="	75	"> PERFIL W 410 x 75,0 </option>
+<option value="	85	"> PERFIL W 410 x 85,0 </option>
+<option value="	52	"> PERFIL W 460 x 52,0 </option>
+<option value="	60	"> PERFIL W 460 x 60,0 </option>
+<option value="	68	"> PERFIL W 460 x 68,0 </option>
+<option value="	74	"> PERFIL W 460 x 74,0 </option>
+<option value="	82	"> PERFIL W 460 x 82,0 </option>
+<option value="	89	"> PERFIL W 460 x 89,0 </option>
+<option value="	66	"> PERFIL W 530 x 66,0 </option>
+<option value="	72	"> PERFIL W 530 x 72,0 </option>
+<option value="	74	"> PERFIL W 530 x 74,0 </option>
+<option value="	82	"> PERFIL W 530 x 82,0 </option>
+<option value="	85	"> PERFIL W 530 x 85,0 </option>
+<option value="	92	"> PERFIL W 530 x 92,0 </option>
+<option value="	101	"> PERFIL W 610 x 101,0 </option>
+<option value="	113	"> PERFIL W 610 x 113,0 </option>
+<option value="	125	"> PERFIL W 610 x 125,0 </option>
+<option value="	140	"> PERFIL W 610 x 140,0 </option>
+<option value="	155	"> PERFIL W 610 x 155,0 </option>
+<option value="	174	"> PERFIL W 610 x 174,0 </option>
+</select>
+<label for=comprimento>Comprimento (metros):</label>
+<input type=number id=comprimento step=0.01>
+<button id=calcularButton onclick=calcularPeso()>Calcular</button>
+<p id=resultado></p>
+<a class=btn-link href=../index.html>← Voltar</a>
+</div>
+<script>function calcularPeso(){const dimensoes=parseFloat(document.getElementById("dimensoes").value);const comprimento=parseFloat(document.getElementById("comprimento").value);if(!isNaN(dimensoes)&&!isNaN(comprimento)){const peso=dimensoes*comprimento;document.getElementById("resultado").innerText=`Peso Total:${peso.toFixed(2)}kg`;}else{document.getElementById("resultado").innerText="Por favor, insira valores válidos.";}}
+document.getElementById("comprimento").addEventListener("keyup",function(event){if(event.key==="Enter"){calcularPeso();}});</script>
+</body>
+</html>

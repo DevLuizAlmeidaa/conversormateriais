@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<link rel=stylesheet href=../css/stylech6.css>
+<title>Conversor Chapas</title>
+<style>body{font-family:Arial black,sans-serif;margin:0;padding:0;background-color:#f5f5f5;display:flex;justify-content:center;align-items:center;height:100vh}.container{max-width:400px;padding:20px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,0.1);border-radius:10px;text-align:center}h1{color:#333;font-size:24px;margin-bottom:20px}label{font-weight:bold;color:#666}select,input[type="number"],button{width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;font-size:14px}button{background-color:#3498db;color:#fff;font-weight:bold;cursor:pointer;border-radius:5px;transition:background-color .3s ease}button:hover{background-color:#2980b9}#resultado{font-size:18px;padding:15px;background-color:#f0f0f0;border:1px solid #d0d0d0;border-radius:5px;color:#333}.btn-link{display:inline-block;text-decoration:none;background-color:#eee;color:#666;padding:8px 16px;border-radius:5px;font-size:14px;cursor:pointer;transition:background-color .3s ease}.btn-link:hover{background-color:#ddd}</style>
+</head>
+<body>
+<div class=container>
+<h1>Conversor Chapas</h1>
+<label for=medida>Escolha a medida da chapa:</label>
+<select id=medida name=medida>
+<option value="CHAPA XADREZ 1/8 1200 X 3000">CHAPA XADREZ (3,00) 1/8" 1200 X 3000</option>
+<option value="CHAPA XADREZ 1/8 1500 X 6000">CHAPA XADREZ (3,00) 1/8" 1500 X 6000</option>
+<option value="CHAPA XADREZ 3/16 1200 X 3000">CHAPA XADREZ (4,75) 3/16" 1200 X 3000</option>
+<option value="CHAPA XADREZ 3/16 1500 X 6000">CHAPA XADREZ (4,75) 3/16" 1500 X 6000</option>
+<option value="CHAPA XADREZ 1/4 1200 X 3000">CHAPA XADREZ (6,30) 1/4" 1200 X 3000</option>
+<option value="CHAPA XADREZ 1/4 1500 X 6000">CHAPA XADREZ (6,30) 1/4" 1500 X 6000</option>
+<option value="CHAPA XADREZ 5/16 1200 X 3000">CHAPA XADREZ (8,00) 5/16" 1200 X 3000</option>
+<option value="CHAPA XADREZ 5/16 1500 X 6000">CHAPA XADREZ (8,00) 5/16" 1500 X 6000</option>
+<option value="CHAPA XADREZ 3/8 1200 X 3000">CHAPA XADREZ (9,50) 3/8" 1200 X 3000</option>
+<option value="CHAPA XADREZ 3/8 1500 X 6000">CHAPA XADREZ (9,50) 3/8" 1500 X 6000</option>
+<option value="3,18 1/8 CHAPA (3,18) 1/8 SAE-1045 1200 X 3000">CHAPA (3,18) 1/8" SAE-1045 1200 X 3000</option>
+<option value="3,18 1/8 CHAPA (3,18) 1/8 SAE-1045 1200 X 6000">CHAPA (3,18) 1/8" SAE-1045 1200 X 6000</option>
+<option value="3,18 1/8&quot; CHAPA (3,18) 1/8 SAE-1045 1500 X 6000">CHAPA (3,18) 1/8" SAE-1045 1500 X 6000</option>
+<option value="3,18 1/8 CHAPA (3,18) 1/8 SAE-1045 2440 X 6000">CHAPA (3,18) 1/8" SAE-1045 2440 X 6000</option>
+<option value="4,75 3/16 CHAPA (4,75) 3/16 SAE 1045 1200 X 3000">CHAPA (4,75) 3/16" SAE-1045 1200 X 3000</option>
+<option value="4,75 3/16 CHAPA (4,75) 3/16 SAE 1045 1200 X 6000">CHAPA (4,75) 3/16" SAE-1045 1200 X 6000</option>
+<option value="4,75 3/16&quot; CHAPA (4,75) 3/16 SAE 1045 1500 X 6000">CHAPA (4,75) 3/16" SAE-1045 1500 X 6000</option>
+<option value="4,75 3/16 CHAPA (4,75) 3/16 SAE 1045 2440 X 6000">CHAPA (4,75) 3/16" SAE-1045 2440 X 6000</option>
+<option value="6,35 1/4 CHAPA (6,35) 1/4 A-36/SAE-1045 1200 X 3000">CHAPA (6,35) 1/4" A-36/SAE-1045 1200 X 3000</option>
+<option value="6,35 1/4 CHAPA (6,35) 1/4 A-36/SAE-1045 1200 X 6000">CHAPA (6,35) 1/4" A-36/SAE-1045 1200 X 6000</option>
+<option value="6,35 1/4&quot; CHAPA (6,35) 1/4 A-36/SAE-1045 1500 X 6000">CHAPA (6,35) 1/4" A-36/SAE-1045 1500 X 6000</option>
+<option value="6,35 1/4 CHAPA (6,35) 1/4 A-36/SAE-1045 2440 X 6000">CHAPA (6,35) 1/4" A-36/SAE-1045 2440 X 6000</option>
+<option value="8 5/16 CHAPA (8) 5/16 A-36/SAE-1045 1200 X 3000">CHAPA (8) 5/16" A-36/SAE-1045 1200 X 3000</option>
+<option value="8 5/16 CHAPA (8) 5/16 A-36/SAE-1045 1200 X 6000">CHAPA (8) 5/16" A-36/SAE-1045 1200 X 6000</option>
+<option value="8 5/16&quot; CHAPA (8) 5/16 A-36/SAE-1045 1500 X 6000">CHAPA (8) 5/16" A-36/SAE-1045 1500 X 6000</option>
+<option value="8 5/16 CHAPA (8) 5/16 A-36/SAE-1045 2440 X 6000">CHAPA (8) 5/16" A-36/SAE-1045 2440 X 6000</option>
+<option value="9,53 3/8 CHAPA (9,53) 3/8 A-36/SAE-1045 1200 X 3000">CHAPA (9,53) 3/8" A-36/SAE-1045 1200 X 3000</option>
+<option value="9,53 3/8 CHAPA (9,53) 3/8 A-36/SAE-1045 1200 X 6000">CHAPA (9,53) 3/8" A-36/SAE-1045 1200 X 6000</option>
+<option value="9,53 3/8&quot; CHAPA (9,53) 3/8 A-36/SAE-1045 1500 X 6000">CHAPA (9,53) 3/8" A-36/SAE-1045 1500 X 6000</option>
+<option value="9,53 3/8 CHAPA (9,53) 3/8 A-36/SAE-1045 2440 X 6000">CHAPA (9,53) 3/8" A-36/SAE-1045 2440 X 6000</option>
+<option value="12,7 1/2 CHAPA (12,7) 1/2 A-36/SAE-1045 1200 X 3000">CHAPA (12,7) 1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="12,7 1/2 CHAPA (12,7) 1/2 A-36/SAE-1045 1200 X 6000">CHAPA (12,7) 1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="12,7 1/2&quot; CHAPA (12,7) 1/2 A-36/SAE-1045 1500 X 6000">CHAPA (12,7) 1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="12,7 1/2 CHAPA (12,7) 1/2 A-36/SAE-1045 2440 X 6000">CHAPA (12,7) 1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="15,9 5/8 CHAPA (15,9) 5/8 A-36/SAE-1045 1200 X 3000">CHAPA (15,9) 5/8" A-36/SAE-1045 1200 X 3000</option>
+<option value="15,9 5/8 CHAPA (15,9) 5/8 A-36/SAE-1045 1200 X 6000">CHAPA (15,9) 5/8" A-36/SAE-1045 1200 X 6000</option>
+<option value="15,9 5/8&quot; CHAPA (15,9) 5/8 A-36/SAE-1045 1500 X 6000">CHAPA (15,9) 5/8" A-36/SAE-1045 1500 X 6000</option>
+<option value="15,9 5/8 CHAPA (15,9) 5/8 A-36/SAE-1045 2440 X 6000">CHAPA (15,9) 5/8" A-36/SAE-1045 2440 X 6000</option>
+<option value="19,1 3/4 CHAPA (19,1) 3/4 A-36/SAE-1045 1200 X 3000">CHAPA (19,1) 3/4" A-36/SAE-1045 1200 X 3000</option>
+<option value="19,1 3/4 CHAPA (19,1) 3/4 A-36/SAE-1045 1200 X 6000">CHAPA (19,1) 3/4" A-36/SAE-1045 1200 X 6000</option>
+<option value="19,1 3/4&quot; CHAPA (19,1) 3/4 A-36/SAE-1045 1500 X 6000">CHAPA (19,1) 3/4" A-36/SAE-1045 1500 X 6000</option>
+<option value="19,1 3/4 CHAPA (19,1) 3/4 A-36/SAE-1045 2440 X 6000">CHAPA (19,1) 3/4" A-36/SAE-1045 2440 X 6000</option>
+<option value="22,2 7/8 CHAPA (22,2) 7/8 A-36/SAE-1045 1200 X 3000">CHAPA (22,2) 7/8" A-36/SAE-1045 1200 X 3000</option>
+<option value="22,2 7/8 CHAPA (22,2) 7/8 A-36/SAE-1045 1200 X 6000">CHAPA (22,2) 7/8" A-36/SAE-1045 1200 X 6000</option>
+<option value="22,2 7/8&quot; CHAPA (22,2) 7/8 A-36/SAE-1045 1500 X 6000">CHAPA (22,2) 7/8" A-36/SAE-1045 1500 X 6000</option>
+<option value="22,2 7/8 CHAPA (22,2) 7/8 A-36/SAE-1045 2440 X 6000">CHAPA (22,2) 7/8" A-36/SAE-1045 2440 X 6000</option>
+<option value="25,4 1 CHAPA (25,4) 1 A-36/SAE-1045 1200 X 3000">CHAPA (25,4) 1" A-36/SAE-1045 1200 X 3000</option>
+<option value="25,4 1 CHAPA (25,4) 1 A-36/SAE-1045 1200 X 6000">CHAPA (25,4) 1" A-36/SAE-1045 1200 X 6000</option>
+<option value="25,4 1&quot; CHAPA (25,4) 1 A-36/SAE-1045 1500 X 6000">CHAPA (25,4) 1" A-36/SAE-1045 1500 X 6000</option>
+<option value="25,4 1 CHAPA (25,4) 1 A-36/SAE-1045 2440 X 6000">CHAPA (25,4) 1" A-36/SAE-1045 2440 X 6000</option>
+<option value="31,8 1 1/4 CHAPA (31,8) 1.1/4 A-36/SAE-1045 1200 X 3000">CHAPA (31,8) 1.1/4" A-36/SAE-1045 1200 X 3000</option>
+<option value="31,8 1 1/4 CHAPA (31,8) 1.1/4 A-36/SAE-1045 1200 X 6000">CHAPA (31,8) 1.1/4" A-36/SAE-1045 1200 X 6000</option>
+<option value="31,8 1 1/4&quot; CHAPA (31,8) 1.1/4 A-36/SAE-1045 1500 X 6000">CHAPA (31,8) 1.1/4" A-36/SAE-1045 1500 X 6000</option>
+<option value="31,8 1 1/4 CHAPA (31,8) 1.1/4 A-36/SAE-1045 2440 X 6000">CHAPA (31,8) 1.1/4" A-36/SAE-1045 2440 X 6000</option>
+<option value="38,1 1 1/2 CHAPA (38,1) 1.1/2 A-36/SAE-1045 1200 X 3000">CHAPA (38,1) 1.1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="38,1 1 1/2 CHAPA (38,1) 1.1/2 A-36/SAE-1045 1200 X 6000">CHAPA (38,1) 1.1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="38,1 1 1/2&quot; CHAPA (38,1) 1.1/2 A-36/SAE-1045 1500 X 6000">CHAPA (38,1) 1.1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="38,1 1 1/2 CHAPA (38,1) 1.1/2 A-36/SAE-1045 2440 X 6000">CHAPA (38,1) 1.1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="41,3 1 5/8 CHAPA (41,3) 1.5/8 A-36/SAE-1045 1200 X 3000">CHAPA (41,3) 1.5/8" A-36/SAE-1045 1200 X 3000</option>
+<option value="41,3 1 5/8 CHAPA (41,3) 1.5/8 A-36/SAE-1045 1200 X 6000">CHAPA (41,3) 1.5/8" A-36/SAE-1045 1200 X 6000</option>
+<option value="41,3 1 5/8&quot; CHAPA (41,3) 1.5/8 A-36/SAE-1045 1500 X 6000">CHAPA (41,3) 1.5/8" A-36/SAE-1045 1500 X 6000</option>
+<option value="41,3 1 5/8 CHAPA (41,3) 1.5/8 A-36/SAE-1045 2440 X 6000">CHAPA (41,3) 1.5/8" A-36/SAE-1045 2440 X 6000</option>
+<option value="44,5 1 3/4 CHAPA (44,5) 1.3/4 A-36/SAE-1045 1200 X 3000">CHAPA (44,5) 1.3/4" A-36/SAE-1045 1200 X 3000</option>
+<option value="44,5 1 3/4 CHAPA (44,5) 1.3/4 A-36/SAE-1045 1200 X 6000">CHAPA (44,5) 1.3/4" A-36/SAE-1045 1200 X 6000</option>
+<option value="44,5 1 3/4&quot; CHAPA (44,5) 1.3/4 A-36/SAE-1045 1500 X 6000">CHAPA (44,5) 1.3/4" A-36/SAE-1045 1500 X 6000</option>
+<option value="44,5 1 3/4 CHAPA (44,5) 1.3/4 A-36/SAE-1045 2440 X 6000">CHAPA (44,5) 1.3/4" A-36/SAE-1045 2440 X 6000</option>
+<option value="50,8 2 CHAPA (50,8) 2 A-36/SAE-1045 1200 X 3000">CHAPA (50,8) 2" A-36/SAE-1045 1200 X 3000</option>
+<option value="50,8 2 CHAPA (50,8) 2 A-36/SAE-1045 1200 X 6000">CHAPA (50,8) 2" A-36/SAE-1045 1200 X 6000</option>
+<option value="50,8 2&quot; CHAPA (50,8) 2 A-36/SAE-1045 1500 X 6000">CHAPA (50,8) 2" A-36/SAE-1045 1500 X 6000</option>
+<option value="50,8 2 CHAPA (50,8) 2 A-36/SAE-1045 2440 X 6000">CHAPA (50,8) 2" A-36/SAE-1045 2440 X 6000</option>
+<option value="57,2 2 1/4 CHAPA (57,2) 2.1/4 A-36/SAE-1045 1200 X 3000">CHAPA (57,2) 2.1/4" A-36/SAE-1045 1200 X 3000</option>
+<option value="57,2 2 1/4 CHAPA (57,2) 2.1/4 A-36/SAE-1045 1200 X 6000">CHAPA (57,2) 2.1/4" A-36/SAE-1045 1200 X 6000</option>
+<option value="57,2 2 1/4&quot; CHAPA (57,2) 2.1/4 A-36/SAE-1045 1500 X 6000">CHAPA (57,2) 2.1/4" A-36/SAE-1045 1500 X 6000</option>
+<option value="57,2 2 1/4 CHAPA (57,2) 2.1/4 A-36/SAE-1045 2440 X 6000">CHAPA (57,2) 2.1/4" A-36/SAE-1045 2440 X 6000</option>
+<option value="63,5 2 1/2 CHAPA (63,5) 2.1/2 A-36/SAE-1045 1200 X 3000">CHAPA (63,5) 2.1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="63,5 2 1/2 CHAPA (63,5) 2.1/2 A-36/SAE-1045 1200 X 6000">CHAPA (63,5) 2.1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="63,5 2 1/2&quot; CHAPA (63,5) 2.1/2 A-36/SAE-1045 1500 X 6000">CHAPA (63,5) 2.1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="63,5 2 1/2 CHAPA (63,5) 2.1/2 A-36/SAE-1045 2440 X 6000">CHAPA (63,5) 2.1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="76,2 3 CHAPA (76,2) 3 A-36/SAE-1045 1200 X 3000">CHAPA (76,2) 3" A-36/SAE-1045 1200 X 3000</option>
+<option value="76,2 3 CHAPA (76,2) 3 A-36/SAE-1045 1200 X 6000">CHAPA (76,2) 3" A-36/SAE-1045 1200 X 6000</option>
+<option value="76,2 3&quot; CHAPA (76,2) 3 A-36/SAE-1045 1500 X 6000">CHAPA (76,2) 3" A-36/SAE-1045 1500 X 6000</option>
+<option value="76,2 3 CHAPA (76,2) 3 A-36/SAE-1045 2440 X 6000">CHAPA (76,2) 3" A-36/SAE-1045 2440 X 6000</option>
+<option value="88,9 3 1/2 CHAPA (88,9) 3.1/2 A-36/SAE-1045 1200 X 3000">CHAPA (88,9) 3.1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="88,9 3 1/2 CHAPA (88,9) 3.1/2 A-36/SAE-1045 1200 X 6000">CHAPA (88,9) 3.1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="88,9 3 1/2&quot; CHAPA (88,9) 3.1/2 A-36/SAE-1045 1500 X 6000">CHAPA (88,9) 3.1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="88,9 3 1/2 CHAPA (88,9) 3.1/2 A-36/SAE-1045 2440 X 6000">CHAPA (88,9) 3.1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="102 4 CHAPA (102) 4 A-36/SAE-1045 1200 X 3000">CHAPA (102) 4" A-36/SAE-1045 1200 X 3000</option>
+<option value="102 4 CHAPA (102) 4 A-36/SAE-1045 1200 X 6000">CHAPA (102) 4" A-36/SAE-1045 1200 X 6000</option>
+<option value="102 4&quot; CHAPA (102) 4 A-36/SAE-1045 1500 X 6000">CHAPA (102) 4" A-36/SAE-1045 1500 X 6000</option>
+<option value="102 4 CHAPA (102) 4 A-36/SAE-1045 2440 X 6000">CHAPA (102) 4" A-36/SAE-1045 2440 X 6000</option>
+<option value="114 4 1/2 CHAPA (114) 4.1/2 A-36/SAE-1045 1200 X 3000">CHAPA (114) 4.1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="114 4 1/2 CHAPA (114) 4.1/2 A-36/SAE-1045 1200 X 6000">CHAPA (114) 4.1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="114 4 1/2&quot; CHAPA (114) 4.1/2 A-36/SAE-1045 1500 X 6000">CHAPA (114) 4.1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="114 4 1/2 CHAPA (114) 4.1/2 A-36/SAE-1045 2440 X 6000">CHAPA (114) 4.1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="127 5 CHAPA (127) 5 A-36/SAE-1045 1200 X 3000">CHAPA (127) 5" A-36/SAE-1045 1200 X 3000</option>
+<option value="127 5 CHAPA (127) 5 A-36/SAE-1045 1200 X 6000">CHAPA (127) 5" A-36/SAE-1045 1200 X 6000</option>
+<option value="127 5&quot; CHAPA (127) 5 A-36/SAE-1045 1500 X 6000">CHAPA (127) 5" A-36/SAE-1045 1500 X 6000</option>
+<option value="127 5 CHAPA (127) 5 A-36/SAE-1045 2440 X 6000">CHAPA (127) 5" A-36/SAE-1045 2440 X 6000</option>
+<option value="140 5 1/2 CHAPA (140) 5.1/2 A-36/SAE-1045 1200 X 3000">CHAPA (140) 5.1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="140 5 1/2 CHAPA (140) 5.1/2 A-36/SAE-1045 1200 X 6000">CHAPA (140) 5.1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="140 5 1/2&quot; CHAPA (140) 5.1/2 A-36/SAE-1045 1500 X 6000">CHAPA (140) 5.1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="140 5 1/2 CHAPA (140) 5.1/2 A-36/SAE-1045 2440 X 6000">CHAPA (140) 5.1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="152 6 CHAPA (152) 6 A-36/SAE-1045 1200 X 3000">CHAPA (152) 6" A-36/SAE-1045 1200 X 3000</option>
+<option value="152 6 CHAPA (152) 6 A-36/SAE-1045 1200 X 6000">CHAPA (152) 6" A-36/SAE-1045 1200 X 6000</option>
+<option value="152 6&quot; CHAPA (152) 6 A-36/SAE-1045 1500 X 6000">CHAPA (152) 6" A-36/SAE-1045 1500 X 6000</option>
+<option value="152 6 CHAPA (152) 6 A-36/SAE-1045 2440 X 6000">CHAPA (152) 6" A-36/SAE-1045 2440 X 6000</option>
+<option value="165 6 1/2 CHAPA (165) 6.1/2 A-36/SAE-1045 1200 X 3000">CHAPA (165) 6.1/2" A-36/SAE-1045 1200 X 3000</option>
+<option value="165 6 1/2 CHAPA (165) 6.1/2 A-36/SAE-1045 1200 X 6000">CHAPA (165) 6.1/2" A-36/SAE-1045 1200 X 6000</option>
+<option value="165 6 1/2&quot; CHAPA (165) 6.1/2 A-36/SAE-1045 1500 X 6000">CHAPA (165) 6.1/2" A-36/SAE-1045 1500 X 6000</option>
+<option value="165 6 1/2 CHAPA (165) 6.1/2 A-36/SAE-1045 2440 X 6000">CHAPA (165) 6.1/2" A-36/SAE-1045 2440 X 6000</option>
+<option value="178 7 CHAPA (178) 7 A-36/SAE-1045 1200 X 3000">CHAPA (178) 7" A-36/SAE-1045 1200 X 3000</option>
+<option value="178 7 CHAPA (178) 7 A-36/SAE-1045 1200 X 6000">CHAPA (178) 7" A-36/SAE-1045 1200 X 6000</option>
+<option value="178 7&quot; CHAPA (178) 7 A-36/SAE-1045 1500 X 6000">CHAPA (178) 7" A-36/SAE-1045 1500 X 6000</option>
+<option value="178 7 CHAPA (178) 7 A-36/SAE-1045 2440 X 6000">CHAPA (178) 7" A-36/SAE-1045 2440 X 6000</option>
+<option value="203 8 CHAPA (203) 8 A-36/SAE-1045 1200 X 3000">CHAPA (203) 8" A-36/SAE-1045 1200 X 3000</option>
+<option value="203 8 CHAPA (203) 8 A-36/SAE-1045 1200 X 6000">CHAPA (203) 8" A-36/SAE-1045 1200 X 6000</option>
+<option value="203 8&quot; CHAPA (203) 8 A-36/SAE-1045 1500 X 6000">CHAPA (203) 8" A-36/SAE-1045 1500 X 6000</option>
+<option value="203 8 CHAPA (203) 8 A-36/SAE-1045 2440 X 6000">CHAPA (203) 8" A-36/SAE-1045 2440 X 6000</option>
+<option value="229 9 CHAPA (229) 9 A-36/SAE-1045 1200 X 3000">CHAPA (229) 9" A-36/SAE-1045 1200 X 3000</option>
+<option value="229 9 CHAPA (229) 9 A-36/SAE-1045 1200 X 6000">CHAPA (229) 9" A-36/SAE-1045 1200 X 6000</option>
+<option value="229 9&quot; CHAPA (229) 9 A-36/SAE-1045 1500 X 6000">CHAPA (229) 9" A-36/SAE-1045 1500 X 6000</option>
+<option value="229 9 CHAPA (229) 9 A-36/SAE-1045 2440 X 6000">CHAPA (229) 9" A-36/SAE-1045 2440 X 6000</option>
+<option value="254 10 CHAPA (254) 10 A-36/SAE-1045 1200 X 3000">CHAPA (254) 10" A-36/SAE-1045 1200 X 3000</option>
+<option value="254 10 CHAPA (254) 10 A-36/SAE-1045 1200 X 6000">CHAPA (254) 10" A-36/SAE-1045 1200 X 6000</option>
+<option value="254 10&quot; CHAPA (254) 10 A-36/SAE-1045 1500 X 6000">CHAPA (254) 10" A-36/SAE-1045 1500 X 6000</option>
+<option value="254 10 CHAPA (254) 10 A-36/SAE-1045 2440 X 6000">CHAPA (254) 10" A-36/SAE-1045 2440 X 6000</option>
+<option value="279 11 CHAPA (279) 11 A-36/SAE-1045 1200 X 3000">CHAPA (279) 11" A-36/SAE-1045 1200 X 3000</option>
+<option value="279 11 CHAPA (279) 11 A-36/SAE-1045 1200 X 6000">CHAPA (279) 11" A-36/SAE-1045 1200 X 6000</option>
+<option value="279 11&quot; CHAPA (279) 11 A-36/SAE-1045 1500 X 6000">CHAPA (279) 11" A-36/SAE-1045 1500 X 6000</option>
+<option value="279 11 CHAPA (279) 11 A-36/SAE-1045 2440 X 6000">CHAPA (279) 11" A-36/SAE-1045 2440 X 6000</option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,3	"> CHAPA INOX - ESPESSURA: 0,3 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,4	"> CHAPA INOX - ESPESSURA: 0,4 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,5	"> CHAPA INOX - ESPESSURA: 0,5 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,6	"> CHAPA INOX - ESPESSURA: 0,6 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,7	"> CHAPA INOX - ESPESSURA: 0,7 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,8	"> CHAPA INOX - ESPESSURA: 0,8 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	0,9	"> CHAPA INOX - ESPESSURA: 0,9 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	1	"> CHAPA INOX - ESPESSURA: 1 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	1,2	"> CHAPA INOX - ESPESSURA: 1,2 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	1,5	"> CHAPA INOX - ESPESSURA: 1,5 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	1,8	"> CHAPA INOX - ESPESSURA: 1,8 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	2	"> CHAPA INOX - ESPESSURA: 2 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	2,5	"> CHAPA INOX - ESPESSURA: 2,5 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	2,6	"> CHAPA INOX - ESPESSURA: 2,6 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	2,75	"> CHAPA INOX - ESPESSURA: 2,75 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	3	"> CHAPA INOX - ESPESSURA: 3 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1/8	ESPESSURA:	3,18	"> CHAPA INOX 1/8" ESPESSURA: 3,18 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	3,5	"> CHAPA INOX - ESPESSURA: 3,5 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	4	"> CHAPA INOX - ESPESSURA: 4 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	4,5	"> CHAPA INOX - ESPESSURA: 4,5 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	3/16	ESPESSURA:	4,76	"> CHAPA INOX 3/16" ESPESSURA: 4,76 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	5	"> CHAPA INOX - ESPESSURA: 5 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	6	"> CHAPA INOX - ESPESSURA: 6 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1/4	ESPESSURA:	6,35	"> CHAPA INOX 1/4" ESPESSURA: 6,35 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	5/16	ESPESSURA:	7,93	"> CHAPA INOX 5/16" ESPESSURA: 7,93 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	3/8	ESPESSURA:	9,53	"> CHAPA INOX 3/8" ESPESSURA: 9,53 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	-	ESPESSURA:	10	"> CHAPA INOX - ESPESSURA: 10 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1/2	ESPESSURA:	12,7	"> CHAPA INOX 1/2" ESPESSURA: 12,7 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	5/8	ESPESSURA:	15,87	"> CHAPA INOX 5/8" ESPESSURA: 15,87 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	3/4	ESPESSURA:	19,05	"> CHAPA INOX 3/4" ESPESSURA: 19,05 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	7/8	ESPESSURA:	22,22	"> CHAPA INOX 7/8" ESPESSURA: 22,22 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1	ESPESSURA:	25,4	"> CHAPA INOX 1" ESPESSURA: 25,4 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1.1/8	ESPESSURA:	28,57	"> CHAPA INOX 1.1/8" ESPESSURA: 28,57 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1.1/4	ESPESSURA:	31,75	"> CHAPA INOX 1.1/4" ESPESSURA: 31,75 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1.1/2	ESPESSURA:	38,1	"> CHAPA INOX 1.1/2" ESPESSURA: 38,1 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	1.3/4	ESPESSURA:	44,45	"> CHAPA INOX 1.3/4" ESPESSURA: 44,45 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	2	ESPESSURA:	50,8	"> CHAPA INOX 2" ESPESSURA: 50,8 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	2.1/4	ESPESSURA:	57,15	"> CHAPA INOX 2.1/4" ESPESSURA: 57,15 mm 3000 X 1500 </option>
+<option value="	CHAPA INOX	2.1/2	ESPESSURA:	63,5	"> CHAPA INOX 2.1/2" ESPESSURA: 63,5 mm 3000 X 1500 </option>
+</select>
+<br>
+<label for=quantidade>Quantidade de peças:</label>
+<input type=number id=quantidade name=quantidade min=1 value=1>
+<br>
+<button type=button onclick=calcularValor()>Calcular</button>
+<p id=resultado></p>
+<a class=btn-link href=../index.html>← Voltar</a>
+</div>
+<script>function pressEnter(event){if(event.keyCode===13){event.preventDefault();calcularValor();}}
+function calcularValor(){const quantidade=parseFloat(document.getElementById('quantidade').value);const medida=parseFloat(document.getElementById('medida').value);const resultado=quantidade*medida;document.getElementById('resultado').textContent=`O resultado é:${resultado}`;}
+document.getElementById('quantidade').addEventListener('keydown',pressEnter);</script>
+<script src=../main/scriptch6.js></script>
+</body>
+</html>
